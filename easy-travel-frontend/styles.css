@@ -1,0 +1,216 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  header {
+    background: #007bff;
+    color: white;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav a {
+    color: white;
+    margin-left: 1em;
+    text-decoration: none;
+    font-size: 1em;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  footer {
+    background: #f1f1f1;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    color: #555;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* Form Styles */
+  form {
+    background: white;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+  }
+  
+  form input,
+  form select,
+  form button {
+    padding: 0.75em;
+    margin-top: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background: #0056b3;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  /* Flight Results Styles */
+  .flight-result {
+    background: white;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1em;
+  }
+  
+  .flight-result h2 {
+    margin-top: 0;
+  }
+  
+  .flight-result button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .flight-result button:hover {
+    background: #218838;
+  }
+  
+  /* User Profile Styles */
+  .profile {
+    background: white;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile h2 {
+    margin-top: 0;
+  }
+  
+  .profile p {
+    margin: 0.5em 0;
+  }
+  
+  /* Booking Form Styles */
+  .booking-form {
+    background: white;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .booking-form h2 {
+    margin-top: 0;
+  }
+  
+  .booking-form p {
+    margin: 0.5em 0;
+  }
+  
+  /* Real-Time Status Styles */
+  .status-form {
+    background: white;
+    padding: 2em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .status-form h3 {
+    margin-top: 0;
+  }
+  
+  /* Live Chat Styles */
+  .live-chat {
+    background: white;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+  }
+  
+  .live-chat .messages {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1em;
+  }
+  
+  .live-chat .message {
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+  }
+  
+  .live-chat .message.me {
+    background: #007bff;
+    color: white;
+    text-align: right;
+  }
+  
+  .live-chat .message.bot {
+    background: #f1f1f1;
+    color: #333;
+    text-align: left;
+  }
+  
+  .live-chat input {
+    width: calc(100% - 2em);
+  }
+  
+  .live-chat button {
+    width: 100%;
+    margin-top: 0.5em;
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75em;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .live-chat button:hover {
+    background: #0056b3;
+  }
+  

@@ -1,0 +1,21 @@
+{
+  "name": "easy-travel",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node easy-travel/server.js",
+    "heroku-postbuild": "cd easy-travel-frontend && npm install && npm run build"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.15",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "body-parser": "^1.19.0"
+  },
+  "engines": {
+    "node": "14.x || 16.x || 18.x"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1"
+  }
+}
