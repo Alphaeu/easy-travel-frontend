@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Navigate to the project directory
-cd easy-travel-frontend
-
 # Install dependencies
 npm install
 
@@ -14,7 +11,7 @@ netlify login
 
 # Initialize a new site or link to an existing site
 netlify init --manual --build "npm run build" --dir "build" <<EOF
-2
+2 
 Alpha
 easy-travel-frontend
 EOF
