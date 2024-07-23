@@ -1,148 +1,70 @@
-# Easy Travel Web App
+# Getting Started with Create React App
 
-Easy Travel is a comprehensive airline travel portal designed to provide a seamless and enjoyable experience for users worldwide. The platform offers robust features such as flight search and booking, user account management, real-time flight status, secure payment integration, and customer support. This full-stack application is built using modern technologies to ensure scalability, maintainability, and security.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Key Features and Functionalities
+## Available Scripts
 
-### User-Friendly Interface
-- **Intuitive Navigation**: Easy-to-navigate with clear menus and pathways to key features.
-- **Responsive Design**: Optimized for desktops, tablets, and smartphones.
+In the project directory, you can run:
 
-### Flight Search and Booking
-- **Advanced Search Options**: Search by destination, date, airline, and class.
-- **Flexible Date Search**: Find cheaper or more convenient flights.
-- **Real-Time Availability**: Display seat availability and prices.
-- **Seat Selection**: Choose seats during the booking process.
+### `npm start`
 
-### User Account Management
-- **Profile Creation**: Create and manage profiles for faster booking and personalized experiences.
-- **Booking History**: Access past bookings and travel history.
-- **Notifications**: Receive email and SMS notifications for booking confirmations, reminders, and flight updates.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### Payment Integration
-- **Multiple Payment Options**: Integrate Stripe, PayPal, and local payment methods.
-- **Secure Transactions**: Ensure secure payment processing with encryption and compliance with PCI-DSS standards.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### Customer Support
-- **Live Chat Support**: Real-time assistance.
-- **Help Center**: Comprehensive help center with FAQs, guides, and contact information.
+### `npm test`
 
-### Flight Status and Notifications
-- **Real-Time Flight Status**: Updates on flight statuses, delays, and cancellations.
-- **Push Notifications**: Important updates sent directly to users' devices.
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### Loyalty Programs
-- **Frequent Flyer Program**: Rewards, points, and benefits for repeat customers.
-- **Promotions and Offers**: Highlight special promotions, discounts, and offers.
+### `npm run build`
 
-### Additional Services
-- **Baggage Tracking**: Track checked baggage.
-- **Travel Insurance**: Purchase travel insurance during the booking process.
-- **Airport Transfers**: Book airport transfers and other ground transportation services.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### Multilingual Support
-- **Language Options**: Website available in multiple languages for international users.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-### Feedback and Reviews
-- **User Reviews**: Leave reviews and ratings for flights and airlines.
-- **Feedback System**: Continuous improvement through user feedback.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Technical Considerations
+### `npm run eject`
 
-### Scalability
-- **Three-Tier Architecture**: Presentation, application, and data tiers.
-- **Caching**: Redis for enhanced performance.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### Database Management
-- **NoSQL Database**: MongoDB for flexible and scalable database management.
-- **Data Security**: Compliance with GDPR and other data privacy regulations.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### Performance Optimization
-- **Load Balancing**: Nginx for handling large volumes of traffic.
-- **Optimized Code**: Efficient Node.js backend and React frontend.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### API Integrations
-- **Flight APIs**: Integration with global flight data APIs.
-- **Payment Gateways**: Integration with multiple payment gateways.
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Development Roadmap
+## Learn More
 
-### Phase 1: Planning and Design
-- Define project scope and requirements.
-- Design wireframes and user interface.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Phase 2: Development
-- Set up development environment.
-- Develop frontend and backend functionalities.
-- Integrate third-party APIs and payment gateways.
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Phase 3: Testing
-- Perform thorough testing (unit, integration, user acceptance).
-- Gather feedback from beta users.
+### Code Splitting
 
-### Phase 4: Deployment
-- Deploy the application on a scalable hosting platform.
-- Monitor performance and resolve any issues.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Phase 5: Maintenance and Updates
-- Regularly update the application with new features and security patches.
-- Continuously gather user feedback for improvements.
+### Analyzing the Bundle Size
 
-## Getting Started
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Prerequisites
-- Node.js and npm installed
-- MongoDB instance running
-- Redis instance running
+### Making a Progressive Web App
 
-### Installation
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-1. Clone the repository:
+### Advanced Configuration
 
-```bash
-git clone https://github.com/yourusername/easy-travel.git
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-2. Navigate to the frontend directory and install dependencies:
+### Deployment
 
-```bash
-cd easy-travel/easy-travel-frontend
-npm install
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-3. Navigate to the backend directory and install dependencies:
+### `npm run build` fails to minify
 
-```bash
-cd ../easy-travel-backend
-npm install
-```
-
-### Running the Application
-
-1. Start the backend server:
-
-```bash
-cd easy-travel-backend
-npm start
-```
-
-2. Start the frontend development server:
-
-```bash
-cd ../easy-travel-frontend
-npm start
-```
-
-3. Open your browser and navigate to `http://localhost:3000`.
-
-## Contributing
-
-Please see the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Easy Travel is an ongoing project and we welcome contributions and feedback to make it even better. Thank you for being a part of our journey!
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
