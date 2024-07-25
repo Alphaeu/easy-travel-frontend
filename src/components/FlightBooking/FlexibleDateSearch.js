@@ -43,8 +43,10 @@ const FlexibleDateSearch = () => {
           </li>
         ))}
       </ul>
+      <p>Find flights with flexible dates to get the best deals.</p>
     </div>
   );
 };
 
 export default FlexibleDateSearch;
+

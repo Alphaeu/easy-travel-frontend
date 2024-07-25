@@ -16,7 +16,8 @@ const RealTimeAvailability = () => {
 
   return (
     <div>
-      <h3>Real-Time Availability</h3>
+      <h2>Real-Time Availability</h2>
+      <p>Check real-time flight availability and book instantly.</p>
       <input
         type="text"
         placeholder="Enter Flight Number"
@@ -35,3 +36,4 @@ const RealTimeAvailability = () => {
 };
 
 export default RealTimeAvailability;
+
