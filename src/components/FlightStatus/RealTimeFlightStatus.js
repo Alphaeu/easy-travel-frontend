@@ -1,35 +1,28 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { getRealTimeFlightStatus } from '../../services/api';
 
 const RealTimeFlightStatus = () => {
-  const [flightNumber, setFlightNumber] = useState('');
-  const [status, setStatus] = useState(null);
+  const [status, setStatus] = useState({});
+  const [error, setError] = useState(null);
 
-  const handleSearch = async () => {
-    try {
-      const response = await axios.get(`/api/flights/status/${flightNumber}`);
-      setStatus(response.data);
-    } catch (error) {
-      console.error('Error fetching flight status', error);
-    }
-  };
+  useEffect(() => {
+    const fetchStatus = async () => {
+      try {
+        const data = await getRealTimeFlightStatus('flightID'); // Replace 'flightID' with actual ID
+        setStatus(data);
+      } catch (err) {
+        setError(err);
+      }
+    };
+
+    fetchStatus();
+  }, []);
 
   return (
     <div>
-      <h3>Real-Time Flight Status</h3>
-      <input
-        type="text"
-        placeholder="Enter Flight Number"
-        value={flightNumber}
-        onChange={(e) => setFlightNumber(e.target.value)}
-      />
-      <button onClick={handleSearch}>Check Status</button>
-      {status && (
-        <div>
-          <p>Status: {status.status}</p>
-          <p>Estimated Arrival: {status.estimatedArrival}</p>
-        </div>
-      )}
+      <h2>Real-Time Flight Status</h2>
+      {error && <p>Error: {error.message}</p>}
+      <p>Status: {status.status}</p>
     </div>
   );
 };

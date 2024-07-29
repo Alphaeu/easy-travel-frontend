@@ -1,16 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from 'react';
+import { getBookingHistory } from '../../services/api';
 
 const BookingHistory = () => {
   const [bookings, setBookings] = useState([]);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const response = await axios.get('/api/bookings');
-        setBookings(response.data);
-      } catch (error) {
-        console.error('Error fetching booking history', error);
+        const data = await getBookingHistory();
+        setBookings(data);
+      } catch (err) {
+        setError(err);
       }
     };
 
@@ -19,12 +20,11 @@ const BookingHistory = () => {
 
   return (
     <div>
-      <h3>Booking History</h3>
+      <h2>Booking History</h2>
+      {error && <p>Error: {error.message}</p>}
       <ul>
-        {bookings.map((booking) => (
-          <li key={booking.id}>
-            {booking.flightNumber} - {booking.date}
-          </li>
+        {bookings.map(booking => (
+          <li key={booking.id}>{booking.details}</li>
         ))}
       </ul>
     </div>
