@@ -21,15 +21,22 @@ import LiveChatSupport from './components/CustomerSupport/LiveChatSupport';
 import HelpCenter from './components/CustomerSupport/HelpCenter';
 import UserReviews from './components/Feedback/UserReviews';
 import FeedbackSystem from './components/Feedback/FeedbackSystem';
-import UserDashboard from './components/AccountManagement/UserDashboard'; // New
-import SearchBar from './components/SearchBar'; // New
-import DynamicBanner from './components/DynamicBanner'; // New
-import TrendingDestinations from './components/TrendingDestinations'; // New
-import Login from './components/Authentication/Login'; // New
-import Register from './components/Authentication/Register'; // New
-import PasswordRecovery from './components/Authentication/PasswordRecovery'; // New
+import UserDashboard from './components/AccountManagement/UserDashboard';
+import SearchBar from './components/SearchBar';
+import DynamicBanner from './components/DynamicBanner';
+import TrendingDestinations from './components/TrendingDestinations';
+import Login from './components/Authentication/Login';
+import Register from './components/Authentication/Register';
+import PasswordRecovery from './components/Authentication/PasswordRecovery';
+import FlightChart from './components/FlightChart';
 
 function App() {
+  // Sample data for FlightChart
+  const flightData = {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+    values: [12, 19, 3, 5, 2, 3],
+  };
+
   return (
     <Router>
       <div className="App">
@@ -62,6 +69,7 @@ function App() {
             <Route path="/register" element={<Register />} /> {/* New */}
             <Route path="/password-recovery" element={<PasswordRecovery />} /> {/* New */}
           </Routes>
+          <FlightChart data={flightData} /> {/* New */}
           <TrendingDestinations /> {/* New */}
         </main>
         <Footer />
@@ -71,5 +79,6 @@ function App() {
 }
 
 export default App;
+
 
 
