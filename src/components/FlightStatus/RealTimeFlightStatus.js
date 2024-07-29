@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { getRealTimeFlightStatus } from '../../services/api';
+import { getFlightStatus } from '../../services/api';
 
 const RealTimeFlightStatus = () => {
-  const [status, setStatus] = useState({});
+  const [status, setStatus] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchStatus = async () => {
       try {
-        const data = await getRealTimeFlightStatus('flightID'); // Replace 'flightID' with actual ID
+        const data = await getFlightStatus();
         setStatus(data);
       } catch (err) {
         setError(err);
@@ -22,7 +22,7 @@ const RealTimeFlightStatus = () => {
     <div>
       <h2>Real-Time Flight Status</h2>
       {error && <p>Error: {error.message}</p>}
-      <p>Status: {status.status}</p>
+      {status && <div>{/* Display flight status here */}</div>}
     </div>
   );
 };

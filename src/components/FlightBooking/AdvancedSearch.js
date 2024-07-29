@@ -7,8 +7,9 @@ const AdvancedSearch = () => {
   const [searchParams, setSearchParams] = useState({
     origin: '',
     destination: '',
-    date: '',
-    // Add other search parameters as needed
+    departureDate: '',
+    returnDate: '',
+    passengers: 1,
   });
 
   const handleSearch = async () => {
@@ -22,7 +23,7 @@ const AdvancedSearch = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setSearchParams(prevParams => ({
+    setSearchParams((prevParams) => ({
       ...prevParams,
       [name]: value,
     }));
@@ -31,34 +32,53 @@ const AdvancedSearch = () => {
   return (
     <div>
       <h2>Advanced Flight Search</h2>
-      <form onSubmit={(e) => {
-        e.preventDefault();
-        handleSearch();
-      }}>
-        <input
-          type="text"
-          name="origin"
-          value={searchParams.origin}
-          onChange={handleChange}
-          placeholder="Origin"
-          required
-        />
-        <input
-          type="text"
-          name="destination"
-          value={searchParams.destination}
-          onChange={handleChange}
-          placeholder="Destination"
-          required
-        />
-        <input
-          type="date"
-          name="date"
-          value={searchParams.date}
-          onChange={handleChange}
-          required
-        />
-        {/* Add other inputs for search parameters as needed */}
+      <form onSubmit={(e) => { e.preventDefault(); handleSearch(); }}>
+        <label>
+          Origin:
+          <input
+            type="text"
+            name="origin"
+            value={searchParams.origin}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Destination:
+          <input
+            type="text"
+            name="destination"
+            value={searchParams.destination}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Departure Date:
+          <input
+            type="date"
+            name="departureDate"
+            value={searchParams.departureDate}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Return Date:
+          <input
+            type="date"
+            name="returnDate"
+            value={searchParams.returnDate}
+            onChange={handleChange}
+          />
+        </label>
+        <label>
+          Passengers:
+          <input
+            type="number"
+            name="passengers"
+            value={searchParams.passengers}
+            onChange={handleChange}
+            min="1"
+          />
+        </label>
         <button type="submit">Search</button>
       </form>
       {error && <p>Error: {error.message}</p>}

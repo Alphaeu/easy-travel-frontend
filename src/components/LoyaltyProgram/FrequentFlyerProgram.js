@@ -1,31 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { getFrequentFlyerProgramDetails } from '../../services/api';
+import { getFrequentFlyerData } from '../../services/api';
 
 const FrequentFlyerProgram = () => {
-  const [programDetails, setProgramDetails] = useState({});
+  const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchProgramDetails = async () => {
+    const fetchData = async () => {
       try {
-        const data = await getFrequentFlyerProgramDetails();
-        setProgramDetails(data);
+        const result = await getFrequentFlyerData();
+        setData(result);
       } catch (err) {
         setError(err);
       }
     };
 
-    fetchProgramDetails();
+    fetchData();
   }, []);
 
   return (
     <div>
       <h2>Frequent Flyer Program</h2>
       {error && <p>Error: {error.message}</p>}
-      <p>Program: {programDetails.name}</p>
-      <p>Points: {programDetails.points}</p>
+      {data && <div>{/* Display frequent flyer data here */}</div>}
     </div>
   );
 };
 
 export default FrequentFlyerProgram;
+
