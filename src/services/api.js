@@ -1,5 +1,5 @@
 // services/api.js
-const BASE_URL = 'https://wanderwings-1721685937-14a5fb6a89c4.herokuapp.com/';
+const BASE_URL = 'https://wanderwings-1721685937-14a5fb6a89c4.heroku app.com/api';
 
 // Utility function for making API requests
 const fetchData = async (endpoint, options = {}) => {
