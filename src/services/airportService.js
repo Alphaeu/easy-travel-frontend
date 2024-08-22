@@ -4,7 +4,7 @@ const dotenv = require('dotenv');
 
 dotenv.config();
 
-const API_KEY = process.env.8a32beae0d9774d52f99d5728e2fa874;
+const API_KEY = process.env.AVIATIONSTACK_API_KEY; // Ensure this matches your .env file key
 const BASE_URL = 'http://api.aviationstack.com/v1';
 
 async function getAirportInfo(airportCode) {
@@ -25,3 +25,4 @@ async function getAirportInfo(airportCode) {
 module.exports = {
     getAirportInfo
 };
+
